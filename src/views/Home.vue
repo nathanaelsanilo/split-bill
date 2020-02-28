@@ -58,7 +58,7 @@
     </v-row>
     <v-row class="home__footer">
       <v-col>
-        <v-btn block dark>Next</v-btn>
+        <v-btn block dark @click="toPeoples">Next</v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -83,6 +83,9 @@ export default {
     }
   },
   methods: {
+    toPeoples: function() {
+      this.$router.push({path: '/peoples'});
+    },
     addItem: function() {
       this.menu.push(this.order);
     }
